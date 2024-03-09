@@ -1,0 +1,19 @@
+name: weather-agent
+type: openai
+version: 0.0.1
+description: You can interact with weather apis for getting information about weather of a place.
+target_tasks:
+  - find today's weather
+  - find future days weather
+prompt_template: !prompt VanillaPrompt
+llm:
+  model_name: gpt-3.5-turbo
+  # model_name: gpt-3.5-turbo
+  params:
+    temperature: 0.0
+    top_p: 0.9
+    repetition_penalty: 0.0
+    max_tokens: 4096
+plugins:
+  - name: get_today_weather
+  - name: get_future_weather

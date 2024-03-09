@@ -10,8 +10,8 @@ target_tasks:
   - find scholars that have the queried research interests
 prompt_template: !prompt VanillaPrompt
 llm: 
-  model_name: gpt-4-0613
-  # model_name: gpt-4
+  model_name: gpt-3.5-turbo
+  # model_name: gpt-3.5-turbo
   params:
     temperature: 0.0
     top_p: 0.9
